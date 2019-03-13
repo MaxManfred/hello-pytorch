@@ -23,9 +23,6 @@ def example_npb00():
     print('NUMPY-PYTORCH BRIDGE')
 
 
-###############################################################
-
-
 def example_npb01():
     print('NumPy array from PyTorch tensor')
     print(' ')
@@ -44,9 +41,6 @@ def example_npb01():
     print('b = ', b)
 
 
-###############################################################
-
-
 def example_npb02():
     print('PyTorch tensor from NumPy array')
     print(' ')
@@ -63,9 +57,6 @@ def example_npb02():
 
     print('a = ', a)
     print('b = ', b)
-
-
-###############################################################
 
 
 print_all_examples(sys.modules[__name__])

@@ -50,7 +50,7 @@ from ai.training.pytorch.utils.print_utils import print_all_examples
 
 
 def example_ag00():
-    print('AUTO GRAD')
+    print('AUTOGRAD')
 
 
 def example_ag01():
@@ -112,8 +112,8 @@ def example_ag04():
     z = y * y * 3
     m = z.mean()
 
-    print(
-        'Let’s backprop now. Because m contains a single scalar, m.backward() is equivalent to m.backward(torch.tensor(1.)).')
+    print('Let\'s backprop now. Because m contains a single scalar, m.backward() is equivalent to '
+          'm.backward(torch.tensor(1.)).')
     m.backward()
 
     print('Print gradients d(m)/dx through x.grad')
