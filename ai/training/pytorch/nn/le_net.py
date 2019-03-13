@@ -2,10 +2,10 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 
-class SimpleCNN(nn.Module):
+class LeNet(nn.Module):
 
     def __init__(self):
-        super(SimpleCNN, self).__init__()
+        super(LeNet, self).__init__()
 
         # 1 input image channel, 6 output channels, 5x5 square convolution kernel
         self.conv1 = nn.Conv2d(1, 6, 5)
@@ -17,6 +17,14 @@ class SimpleCNN(nn.Module):
         self.fc3 = nn.Linear(84, 10)
 
     def forward(self, x):
+        """
+            You just have to define the forward function, and the backward function (where gradients are computed) is
+            automatically defined for you using autograd. You can use any of the Tensor operations in the forward
+            function.
+
+            :param x: input tensor
+            :return: output tensor
+        """
         # Max pooling over a (2, 2) window
         x = F.max_pool2d(F.relu(self.conv1(x)), (2, 2))
 

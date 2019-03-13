@@ -61,9 +61,6 @@ def example_ag01():
     print(x)
 
 
-###############################################################
-
-
 def example_ag02():
     print('Do a tensor operation:')
     print('')
@@ -88,9 +85,6 @@ def example_ag02():
     print(m)
 
 
-###############################################################
-
-
 def example_ag03():
     print('.requires_grad_( ... ) changes an existing Tensor\'s requires_grad flag in-place.')
     print('The input flag defaults to False if not given.')
@@ -112,9 +106,6 @@ def example_ag03():
     print('b.grad_fn = ', b.grad_fn)
 
 
-###############################################################
-
-
 def example_ag04():
     x = torch.ones(2, 2, requires_grad=True)
     y = x + 2
@@ -128,9 +119,6 @@ def example_ag04():
     print('Print gradients d(m)/dx through x.grad')
     print(' ')
     print(x.grad)
-
-
-###############################################################
 
 
 def example_ag05():
@@ -151,9 +139,6 @@ def example_ag05():
     y.backward(v)
 
     print(x.grad)
-
-
-###############################################################
 
 
 def example_ag06():
