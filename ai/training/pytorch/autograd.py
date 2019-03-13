@@ -53,7 +53,7 @@ def example_ag00():
     print('AUTO GRAD')
 
 
-def example_to01():
+def example_ag01():
     print('Create a tensor and set ``requires_grad=True`` to track computation with it')
     print('')
 
@@ -61,9 +61,10 @@ def example_to01():
     print(x)
 
 
-# ###############################################################
+###############################################################
 
-def example_to02():
+
+def example_ag02():
     print('Do a tensor operation:')
     print('')
     print('y = x + 2')
@@ -87,9 +88,10 @@ def example_to02():
     print(m)
 
 
-# ###############################################################
+###############################################################
 
-def example_to03():
+
+def example_ag03():
     print('.requires_grad_( ... ) changes an existing Tensor\'s requires_grad flag in-place.')
     print('The input flag defaults to False if not given.')
     print(' ')
@@ -110,9 +112,10 @@ def example_to03():
     print('b.grad_fn = ', b.grad_fn)
 
 
-# ###############################################################
+###############################################################
 
-def example_to04():
+
+def example_ag04():
     x = torch.ones(2, 2, requires_grad=True)
     y = x + 2
     z = y * y * 3
@@ -127,9 +130,10 @@ def example_to04():
     print(x.grad)
 
 
-# ###############################################################
+###############################################################
 
-def example_to05():
+
+def example_ag05():
     # create a random 3x3 matrix and enable autograd
     x = torch.randn(3, requires_grad=True)
 
@@ -149,9 +153,10 @@ def example_to05():
     print(x.grad)
 
 
-# ###############################################################
+###############################################################
 
-def example_to06():
+
+def example_ag06():
     # You can also stop autograd from tracking history on Tensors with .requires_grad=True by wrapping the code block in
     # with torch.no_grad():
 
